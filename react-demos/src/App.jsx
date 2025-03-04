@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Main from "../components/Main";
+import Header from "../components/Header";
+import Footer from "../components/footer";
+import Props from "../components/Props";
+import Person from "../components/dynamic-props";
+import Card from "../components/children-props";
+import Password from "../components/conditional-rendering";
+import ButtonPractice from "../components/Button-practice";
+import UseStatePractice from "../components/useStatePractice";
+import SharedStateVar from "../components/SharedStateVar";
+import InitState from "../components/initState";
+import UseEffect from "../components/UseEffect";
+import ToDoList from "../components/ToDoList";
+import Profile from "../components/profile";
+import ContextApi from "../components/ContextApi";
+const number = [1, 2, 3, 4, 5];
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>hello world</h1>
+      <Header />
+      <Main />
+      {number.map((number) => (
+        <ul key={number}>
+          <li>{number}</li>
+        </ul>
+      ))}
+      <Props />
+      <Person name="Habib" phone="Iphone13" price={90000} />
+      <Person name="fahad" phone="Iphone9" price={40000} />
+      <Card>
+        <h2>inside card 2</h2>
+        <h2>inside card 3</h2>
+      </Card>
+      <Password />
+      <ButtonPractice />
+      <UseStatePractice />
+      <SharedStateVar />
+      <InitState />
+      <UseEffect />
+      <ToDoList />
+      <Profile />
+      <ContextApi />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
