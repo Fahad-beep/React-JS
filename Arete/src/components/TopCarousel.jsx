@@ -108,8 +108,6 @@ const TopCarousel = () => {
             fill="none"
           />
           {[0.2, 0.35, 0.5].map((t, index) => {
-            console.log(index);
-            console.log(curr);
             const x =
               150 * (1 - t) * (1 - t) + 170 * 2 * (1 - t) * t + 150 * t * t;
             const y =

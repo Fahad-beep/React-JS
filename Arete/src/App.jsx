@@ -2,6 +2,7 @@ import React from "react";
 import TopCarousel from "./components/TopCarousel";
 import Header from "./components/Header";
 import MidText from "./components/MidText";
+import MidCarousel from "./components/MidCarousel";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Header />
         <TopCarousel />
         <MidText />
+        <MidCarousel />
       </div>
     </div>
   );
